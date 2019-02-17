@@ -4,7 +4,11 @@ QUERON Amaury et SINNIG Solène
 
 
 #Prise en main de l’interpréteur de commandes
+
+
 ##Manuel 
+
+
 Afin de connaître le rôle d'une commande, on utilise la commande *man* suivi du nom de la commande. Ici : *man which*
 
 La commande which sert à envoyer le chemin des fichiers exécutés dans l'environnement.
@@ -16,7 +20,10 @@ Pour quitter le manuel, on appuie sur la touche *q*.
 On souhaite afficher la première page de la section 6 : *man 6 intro*
 Cette page affiche le man de la section 6 qui concerne les jeux.
 
+
 ##Navigation dans l’arborescence des fichiers
+
+
 Pour accéder au dossier /var/log on tape la commande *cd /var/log* et pour remonter dans le dossier parent (/var) *cd ..* .
 Pour retourner dans le dossier personnel on tape *cd ~*. Si l'on veut retourner dans le dossier où nous étions précédemment, il suffit de taper *cd -*.
 Si on tape la commande *cd /root* pour accéder au dossier root, ça ne fonctionne pas, il faut utiliser le mode superutilisateur mais si l'on tape *sudo cd /root* cela ne fonctionne pas non plus. *cd* est une commande interne du shell tandis que *sudo* non. 
@@ -26,7 +33,10 @@ on crée deux dossiers dans notre dossier personnel avec la commande *mkdir*. En
 
 Pour supprimer un dossier, la commande *rm* ne fonctionne pas car elle ne sert que pour les fichiers, on doit utiliser la commande *rmdir* mais le dossier doit être vide. Cela ne fonctionne pas pour le dossier2 car il contient des documents, pour le supprimer en une seule commande i lfaut taper *rm -r dossier2*.
 
+
 ##Commandes importantes
+
+
 Pour afficher l'heure *date +%T* (juste *date* si on veut la date et l'heure). La commande time affiche combien de temps elle a mis pour exécuter la commande qui suit (ex *time ls*) en affichant le temps CPU. 
 
 La commande *la* sert à afficher tous les fichiers y compris les fichiers cachés qui commencent par un point.
@@ -69,7 +79,10 @@ Pour trouver le fichier history.log on utilise la commande *locate history.log /
 *grep* permet de chercher une chaine dans un fichier et renvoie les lignes où apparaissent les occurences.
 *grep ll .bashrc* permet de trouver là où se situe la définition de l'alias ll dans le fichier .bashrc se situant dans notre dossier d'accueil.
 
+
 #Personnalisation du shell
+
+
 Nous souhaitons en environnement plus agréable, pour cela nous ajoutons des couleurs au shell. Nous modifions donc le fichier ~/.bashrc.
 Comme demandé nous modifions la mise en forme de l'invite de commande : *PS1='${debian_chroot:+($debian_chroot)}\[\033[95m\]\A\[\033[00m\]-\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[96m\]\w\[\033[00m\]\$'*
 
